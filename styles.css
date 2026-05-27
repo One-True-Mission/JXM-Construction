@@ -72,8 +72,9 @@ nav.site-nav {
   align-items: center;
   justify-content: space-between;
   padding: 0.85rem 2rem;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  gap: 2rem;
 }
 .nav-logo {
   display: flex;
@@ -81,22 +82,16 @@ nav.site-nav {
   gap: 0.85rem;
 }
 .nav-logo img {
-  height: 48px;
+  height: 58px;
   width: auto;
+  transition: transform 0.2s ease;
 }
-.nav-logo-text {
-  font-family: var(--display);
-  font-size: 1.4rem;
-  letter-spacing: 0.08em;
-  color: var(--white);
-  line-height: 1;
-}
-.nav-logo-text span {
-  color: var(--gold);
+.nav-logo:hover img {
+  transform: scale(1.04);
 }
 .nav-links {
   display: flex;
-  gap: 2.2rem;
+  gap: 1.8rem;
   align-items: center;
   font-family: var(--industrial);
   font-weight: 600;
@@ -1170,6 +1165,37 @@ footer {
   font-size: 0.88rem;
 }
 .footer-bottom a { color: var(--gold); }
+
+/* Footer social icon buttons */
+.footer-social {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.3rem;
+}
+.footer-social a {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-2);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  color: var(--gold);
+  transition: all 0.25s ease;
+}
+.footer-social a:hover {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(212,160,23,0.3);
+}
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
 .footer-credit {
   text-align: center;
   margin-top: 0.5rem;
@@ -1188,6 +1214,20 @@ footer {
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 968px) {
+  .nav-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+  .nav-logo {
+    grid-column: 2;
+    justify-self: center;
+  }
+  .menu-toggle {
+    grid-column: 3;
+    justify-self: end;
+    display: block;
+  }
   .nav-links {
     display: none;
     position: absolute;
@@ -1197,9 +1237,10 @@ footer {
     padding: 1.5rem 2rem;
     gap: 1.2rem;
     border-bottom: 1px solid var(--border);
+    grid-column: 1 / -1;
   }
   .nav-links.open { display: flex; }
-  .menu-toggle { display: block; }
+  .nav-logo img { height: 50px; }
   .about-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
