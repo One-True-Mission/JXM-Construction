@@ -163,4 +163,61 @@ document.addEventListener('DOMContentLoaded', () => {
     startAuto();
   }
 
+  // LIGHTBOX (services page gallery)
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox) {
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    const galleryItems = Array.from(document.querySelectorAll('[data-lightbox]'));
+    let currentLightboxIdx = 0;
+
+    function openLightbox(idx) {
+      currentLightboxIdx = idx;
+      const img = galleryItems[idx].querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    function navLightbox(dir) {
+      currentLightboxIdx = (currentLightboxIdx + dir + galleryItems.length) % galleryItems.length;
+      const img = galleryItems[currentLightboxIdx].querySelector('img');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    }
+
+    galleryItems.forEach((item, i) => {
+      item.addEventListener('click', () => openLightbox(i));
+    });
+    lightboxClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeLightbox();
+    });
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLightbox(-1);
+    });
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLightbox(1);
+    });
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navLightbox(-1);
+      if (e.key === 'ArrowRight') navLightbox(1);
+    });
+  }
+
 });
