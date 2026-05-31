@@ -19,10 +19,10 @@
       <img src="assets/logo.png" alt="JXM Construction LLC" />
     </a>
     <div class="nav-links" id="navLinks">
-      <a href="index.html" data-nav="home">Home</a>
-      <a href="services.html" data-nav="services">Services</a>
-      <a href="about.html" data-nav="about">About</a>
-      <a href="contact.html" data-nav="contact">Contact</a>
+      <a href="index.html" data-nav="home" data-en="Home" data-es="Inicio">Home</a>
+      <a href="services.html" data-nav="services" data-en="Services" data-es="Servicios">Services</a>
+      <a href="about.html" data-nav="about" data-en="About" data-es="Nosotros">About</a>
+      <a href="contact.html" data-nav="contact" data-en="Contact" data-es="Contacto">Contact</a>
     </div>
     <button class="menu-toggle" id="menuToggle">☰</button>
   </div>
@@ -32,9 +32,9 @@
 <header class="hero hero-short hero-contact">
   <div class="hero-bg"></div>
   <div class="container hero-content">
-    <div class="hero-eyebrow">Get In Touch</div>
-    <h1>Start Your<span>Next Project.</span></h1>
-    <p class="hero-sub">Tell us what you're planning. We'll come look, talk it through, and put a real number on it. No pressure, no surprises.</p>
+    <div class="hero-eyebrow" data-en="Get In Touch" data-es="Contáctenos">Get In Touch</div>
+    <h1 data-en="Start Your<span>Next Project.</span>" data-es="Empiece Su<span>Próximo Proyecto.</span>">Start Your<span>Next Project.</span></h1>
+    <p class="hero-sub" data-en="Tell us what you're planning. We'll come look, talk it through, and put a real number on it. No pressure, no surprises." data-es="Cuéntenos lo que está planeando. Vamos a ver, hablamos del proyecto, y le damos un número real. Sin presión, sin sorpresas.">Tell us what you're planning. We'll come look, talk it through, and put a real number on it. No pressure, no surprises.</p>
   </div>
 </header>
 
@@ -42,19 +42,19 @@
 <section class="panel">
   <div class="container">
     <div class="panel-inner">
-      <div class="section-eyebrow">Contact JXM</div>
-      <h2>Free Estimates. <span>Real Answers.</span></h2>
-      <p class="section-lead">Reach out by phone, message, or the form. Whichever's easiest for you. We respond fast and we don't waste your time.</p>
+      <div class="section-eyebrow" data-en="Contact JXM" data-es="Contactar JXM">Contact JXM</div>
+      <h2 data-en="Free Estimates. <span>Real Answers.</span>" data-es="Estimados Gratuitos. <span>Respuestas Reales.</span>">Free Estimates. <span>Real Answers.</span></h2>
+      <p class="section-lead" data-en="Reach out by phone, message, or the form. Whichever's easiest for you. We respond fast and we don't waste your time." data-es="Comuníquese por teléfono, mensaje, o el formulario. Lo que sea más fácil para usted. Respondemos rápido y no perdemos su tiempo.">Reach out by phone, message, or the form. Whichever's easiest for you. We respond fast and we don't waste your time.</p>
 
       <div class="contact-grid">
         <div class="contact-info">
-          <h3>Get In Touch</h3>
-          <p>We're a small crew, so calls and messages go straight to the people doing the work. Expect a real response, not a call center.</p>
+          <h3 data-en="Get In Touch" data-es="Contáctenos">Get In Touch</h3>
+          <p data-en="We're a small crew, so calls and messages go straight to the people doing the work. Expect a real response, not a call center." data-es="Somos un equipo pequeño, así que las llamadas y mensajes van directo a la gente haciendo el trabajo. Espere una respuesta real, no un centro de llamadas.">We're a small crew, so calls and messages go straight to the people doing the work. Expect a real response, not a call center.</p>
 
           <a href="tel:3614072403" class="contact-method">
             <div class="contact-method-icon">☎</div>
             <div>
-              <div class="contact-method-label">Call or Text</div>
+              <div class="contact-method-label" data-en="Call or Text" data-es="Llame O Mande Texto">Call or Text</div>
               <div class="contact-method-value">(361) 407-2403</div>
             </div>
           </a>
@@ -78,7 +78,7 @@
           <div class="contact-method">
             <div class="contact-method-icon">⚲</div>
             <div>
-              <div class="contact-method-label">Service Area</div>
+              <div class="contact-method-label" data-en="Service Area" data-es="Área De Servicio">Service Area</div>
               <div class="contact-method-value">Shiner, Houston, Austin, San Antonio</div>
             </div>
           </div>
@@ -86,58 +86,58 @@
           <div class="contact-method">
             <div class="contact-method-icon">⏱</div>
             <div>
-              <div class="contact-method-label">Response Time</div>
-              <div class="contact-method-value">Usually within 24 hours</div>
+              <div class="contact-method-label" data-en="Response Time" data-es="Tiempo De Respuesta">Response Time</div>
+              <div class="contact-method-value" data-en="Usually within 24 hours" data-es="Normalmente dentro de 24 horas">Usually within 24 hours</div>
             </div>
           </div>
         </div>
 
         <div class="contact-form">
-          <form action="https://formspree.io/f/xykvlleb" method="POST">
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
             <input type="hidden" name="_subject" value="New JXM Construction Quote Request" />
             <input type="hidden" name="_next" value="thank-you.html" />
 
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name" data-en="Name" data-es="Nombre">Name</label>
                 <input type="text" id="name" name="name" required />
               </div>
               <div class="form-group">
-                <label for="phone">Phone</label>
+                <label for="phone" data-en="Phone" data-es="Teléfono">Phone</label>
                 <input type="tel" id="phone" name="phone" required />
               </div>
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email" data-en="Email" data-es="Correo Electrónico">Email</label>
               <input type="email" id="email" name="email" required />
             </div>
 
             <div class="form-group">
-              <label for="location">Project Location</label>
-              <input type="text" id="location" name="location" placeholder="City and state" />
+              <label for="location" data-en="Project Location" data-es="Ubicación Del Proyecto">Project Location</label>
+              <input type="text" id="location" name="location" data-en-placeholder="City and state" data-es-placeholder="Ciudad y estado" placeholder="City and state" />
             </div>
 
             <div class="form-group">
-              <label for="service">Service Needed</label>
+              <label for="service" data-en="Service Needed" data-es="Servicio Necesario">Service Needed</label>
               <select id="service" name="service" required>
-                <option value="">Select a service...</option>
-                <option>New Construction</option>
-                <option>Remodel / Renovation</option>
-                <option>Interior Finish (Drywall, Paint, Flooring, Tile)</option>
-                <option>Plumbing / Electrical</option>
-                <option>Doors, Windows, or Fencing</option>
-                <option>Roofing or Outdoor Structure</option>
-                <option>Other / Not Sure</option>
+                <option value="" data-en="Select a service..." data-es="Seleccione un servicio...">Select a service...</option>
+                <option value="New Construction" data-en="New Construction" data-es="Construcción Nueva">New Construction</option>
+                <option value="Remodel / Renovation" data-en="Remodel / Renovation" data-es="Remodelación / Renovación">Remodel / Renovation</option>
+                <option value="Interior Finish" data-en="Interior Finish (Drywall, Paint, Flooring, Tile)" data-es="Acabado Interior (Tablaroca, Pintura, Pisos, Azulejo)">Interior Finish (Drywall, Paint, Flooring, Tile)</option>
+                <option value="Plumbing / Electrical" data-en="Plumbing / Electrical" data-es="Plomería / Electricidad">Plumbing / Electrical</option>
+                <option value="Doors, Windows, or Fencing" data-en="Doors, Windows, or Fencing" data-es="Puertas, Ventanas, O Cercado">Doors, Windows, or Fencing</option>
+                <option value="Roofing or Outdoor Structure" data-en="Roofing or Outdoor Structure" data-es="Techos O Estructura Exterior">Roofing or Outdoor Structure</option>
+                <option value="Other / Not Sure" data-en="Other / Not Sure" data-es="Otro / No Estoy Seguro">Other / Not Sure</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="message">Project Details</label>
-              <textarea id="message" name="message" placeholder="Tell us about the project. What you're building, your timeline, anything we should know..." required></textarea>
+              <label for="message" data-en="Project Details" data-es="Detalles Del Proyecto">Project Details</label>
+              <textarea id="message" name="message" data-en-placeholder="Tell us about the project. What you're building, your timeline, anything we should know..." data-es-placeholder="Cuéntenos sobre el proyecto. Qué está construyendo, su cronograma, cualquier cosa que debamos saber..." placeholder="Tell us about the project. What you're building, your timeline, anything we should know..." required></textarea>
             </div>
 
-            <button type="submit" class="form-submit">Request Free Estimate →</button>
+            <button type="submit" class="form-submit" data-en="Request Free Estimate →" data-es="Solicite Un Estimado Gratis →">Request Free Estimate →</button>
           </form>
         </div>
       </div>
@@ -151,34 +151,34 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/logo.png" alt="JXM Construction LLC" />
-        <p>JXM Construction LLC. Full-service construction based around Shiner, TX, serving Houston, Austin, and San Antonio. Built right. Built in Texas.</p>
+        <p data-en="JXM Construction LLC. Full-service construction based around Shiner, TX, serving Houston, Austin, and San Antonio. Built right. Built in Texas." data-es="JXM Construction LLC. Construcción de servicio completo con base en Shiner, TX, sirviendo a Houston, Austin, y San Antonio. Bien construido. Hecho en Texas.">JXM Construction LLC. Full-service construction based around Shiner, TX, serving Houston, Austin, and San Antonio. Built right. Built in Texas.</p>
       </div>
       <div class="footer-col">
-        <h4>Services</h4>
+        <h4 data-en="Services" data-es="Servicios">Services</h4>
         <ul>
-          <li><a href="services.html">New Construction</a></li>
-          <li><a href="services.html">Remodels</a></li>
-          <li><a href="services.html">Roofing</a></li>
-          <li><a href="services.html">Plumbing &amp; Electrical</a></li>
-          <li><a href="services.html">Fences &amp; Patios</a></li>
+          <li><a href="services.html" data-en="New Construction" data-es="Construcción Nueva">New Construction</a></li>
+          <li><a href="services.html" data-en="Remodels" data-es="Remodelaciones">Remodels</a></li>
+          <li><a href="services.html" data-en="Roofing" data-es="Techos">Roofing</a></li>
+          <li><a href="services.html" data-en="Plumbing &amp; Electrical" data-es="Plomería y Electricidad">Plumbing &amp; Electrical</a></li>
+          <li><a href="services.html" data-en="Fences &amp; Patios" data-es="Cercas y Patios">Fences &amp; Patios</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Company</h4>
+        <h4 data-en="Company" data-es="Compañía">Company</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+          <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+          <li><a href="about.html" data-en="About" data-es="Nosotros">About</a></li>
+          <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Get In Touch</h4>
+        <h4 data-en="Get In Touch" data-es="Contáctenos">Get In Touch</h4>
         <ul>
           <li><a href="tel:3614072403">(361) 407-2403</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
         </ul>
-        <h4 style="margin-top: 1.5rem;">Follow Us</h4>
+        <h4 style="margin-top: 1.5rem;" data-en="Follow Us" data-es="Síganos">Follow Us</h4>
         <div class="footer-social">
           <a href="https://www.facebook.com/profile.php?id=61584589681228" target="_blank" rel="noopener" aria-label="Facebook">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
@@ -190,11 +190,17 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© <span id="year"></span> JXM Construction LLC. All rights reserved.</div>
-      <div class="footer-credit">Built by <a href="https://otm-designs.com" target="_blank" rel="noopener">OTM Web Design</a></div>
+      <div data-en="© <span id=&quot;year&quot;></span> JXM Construction LLC. All rights reserved." data-es="© <span id=&quot;year&quot;></span> JXM Construction LLC. Todos los derechos reservados.">© <span id="year"></span> JXM Construction LLC. All rights reserved.</div>
+      <div class="footer-credit" data-en="Built by <a href=&quot;https://otm-designs.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>OTM Web Design</a>" data-es="Hecho por <a href=&quot;https://otm-designs.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>OTM Web Design</a>">Built by <a href="https://otm-designs.com" target="_blank" rel="noopener">OTM Web Design</a></div>
     </div>
   </div>
 </footer>
+
+<!-- LANGUAGE TOGGLE -->
+<button id="langToggle" class="lang-toggle" aria-label="Toggle language">
+  <span class="lang-toggle-icon">🌐</span>
+  <span class="lang-toggle-label">¿Habla Español?</span>
+</button>
 
 <script src="script.js"></script>
 </body>

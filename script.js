@@ -1,6 +1,54 @@
 // JXM CONSTRUCTION - SHARED SCRIPTS
 
+// LANGUAGE TOGGLE - runs immediately to prevent flash of English on Spanish-set pages
+(function() {
+  const savedLang = localStorage.getItem('jxm-lang') || 'en';
+  document.documentElement.setAttribute('lang', savedLang === 'es' ? 'es' : 'en');
+  document.documentElement.dataset.lang = savedLang;
+})();
+
+function applyLanguage(lang) {
+  document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+  document.documentElement.dataset.lang = lang;
+  localStorage.setItem('jxm-lang', lang);
+
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const target = lang === 'es' ? el.getAttribute('data-es') : el.getAttribute('data-en');
+    if (target !== null) {
+      el.innerHTML = target;
+    }
+  });
+
+  // Also swap placeholders and option values
+  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+    const target = lang === 'es' ? el.getAttribute('data-es-placeholder') : el.getAttribute('data-en-placeholder');
+    if (target !== null) el.setAttribute('placeholder', target);
+  });
+
+  // Update the toggle button text
+  const btn = document.getElementById('langToggle');
+  if (btn) {
+    const label = btn.querySelector('.lang-toggle-label');
+    if (label) {
+      label.textContent = lang === 'es' ? 'Speak English?' : '¿Habla Español?';
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Apply saved language immediately on load
+  const savedLang = localStorage.getItem('jxm-lang') || 'en';
+  applyLanguage(savedLang);
+
+  // Hook up toggle button
+  const langToggle = document.getElementById('langToggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      const current = localStorage.getItem('jxm-lang') || 'en';
+      applyLanguage(current === 'en' ? 'es' : 'en');
+    });
+  }
 
   // YEAR
   const yearEl = document.getElementById('year');

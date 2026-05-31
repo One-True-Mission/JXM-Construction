@@ -1336,6 +1336,47 @@ footer {
   color: var(--gold-bright);
 }
 
+/* Sticky Spanish/English toggle button */
+.lang-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  background: var(--black);
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  border-radius: 50px;
+  padding: 0.85rem 1.3rem;
+  font-family: var(--industrial);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5), 0 0 20px rgba(212,160,23,0.25);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.lang-toggle:hover {
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212,160,23,0.4);
+}
+.lang-toggle-icon {
+  font-size: 1rem;
+}
+@media (max-width: 580px) {
+  .lang-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.82rem;
+  }
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 968px) {
   .nav-inner {
